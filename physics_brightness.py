@@ -312,8 +312,8 @@ def jacobian_H(state: StateB, coeffs: CoeffsB) -> np.ndarray:
 
 def measurement_noise(state: StateB,
                        coeffs: CoeffsB,
-                       sigma_E_at_B0: float = 1e-4,
-                       sigma_C_at_B0: float = 1e-2,
+                       sigma_E_at_B0: float = 2000.0,  # patched: was 1e-4
+                       sigma_C_at_B0: float = 0.05,    # patched: was 1e-2
                        sigma_T:       float = 0.1,
                        sigma_z:       float = 0.05,
                        sigma_B:       float = 1.0) -> np.ndarray:
